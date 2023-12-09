@@ -42,5 +42,17 @@ pipeline {
                 }
             }
         }
+
+        stage('Clear Symfony Cache') {
+            steps {
+                script {
+                    // Replace with your actual PHP container name
+                    def phpContainerName = 'symfony_app_main' // Adjust this to match your actual PHP container name
+
+                    // Clear cache
+                    sh "docker exec ${phpContainerName} php /var/www/bin/console cache:clear"
+                }
+            }
+        }
     }
 }
