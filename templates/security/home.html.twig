@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Thé TipTop | Jeu Concours{% endblock %}
+        {% block stylesheets %}
+        <style>
+.jumbotron{
+      background-image: url("uploads/images/bgimage.avif");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+.cad{
+
+  margin: 0 auto;
+}
+
+        </style>
+       
+        {% endblock %}
+{% block body %}
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity:0.85;">
+  <div class="container">
+    <a class="navbar-brand" href="/">TeaTipTop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") and app.user.roles[0] == "ROLE_ADMIN" %}
+ <li class="nav-item">
+                <a class="nav-link" href="/employe">Gestion des gains</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/users" >Liste des participants</a>
+            </li>
+                        <li class="nav-item">
+                <a class="nav-link" href="/admin/employes" >Liste des employés</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/groslot">Le gros lot</a>
+            </li>
+            {% elseif is_granted("IS_AUTHENTICATED_REMEMBERED") and app.user.roles[0] == "ROLE_EMPLOYE" %}
+            <li class="nav-item">
+                <a class="nav-link" href="/employe">Gestion des gains</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/users" >Liste des participants</a>
+            </li>
+
+            {% elseif is_granted("IS_AUTHENTICATED_REMEMBERED") and app.user.roles[0] == "ROLE_USER" %}
+
+         <li class="nav-item">
+                <a class="nav-link" href="/bienvenu" id="ticketsRecord">Je participe</a>
+            </li>
+
+               {% endif %}
+      </ul>  
+      
+      <form class="d-flex">
+  
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}    
+           <ul class="navbar-nav me-auto">
+               <li class="nav-item d-flex">
+                <a class="nav-link" style="color:white;" href="/profil">Mon profil</a>
+            </li> 
+         <li class="nav-item d-flex">
+                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+         </li>
+
+          {% else %}   
+         <li class="nav-item d-flex">
+              <b>  <a class="nav-link" style="color:white;" href="/register">Inscription</a></b>
+            </li>
+            
+           {% endif %}   
+        </ul>      
+      </form>
+
+     
+    </div>
+  </div>  
+</nav>
+
+<div class="jumbotron"><br>
+  <h1  align="center" style="font-size:45px">The TipTop</h1><br>
+  <h2  align="center" style="font-size:25px">Bienvenue sur Thé TipTop le jeu-concours! Inscrivez-vous et participez.</h2><br>
+<hr class="my-4">
+ <center>  <p style="font-size:20px">Si vous avez un ticket de caisse ou une facture entre le <b>{{ date.closingDate|date_modify("-30 day")|date('d-m-Y') }} </b> et le <b>{{ date.closingDate|date('d-m-Y') }} </b> et supérieure à 49 € vous êtes éligible à  participer à ce jeu de concours.</p></center> 
+              <center>  <p style="font-size:20px">Le grand tirage au sort aura lieu le <b>{{ date.closingDate|date('d-m-Y') }} </b>pour détermier un gagnant parmi les participants d'un an de thé d'une valeur de 360 €.</b> .</p></center> 
+<hr><br>     <div class="col-md-6 offset-md-1">
+                <p style="font-size:18px"><b>- 1 500 000 Cadeaux à gagner :</b>des infuseurs à thé,des boites de 100g d’un thé detox ou infusion,des boites de 100g de thé signature,
+                des coffrets découverte d’une valeur de 39 €,des coffrets découverte d’une valeur de 69 €</p>
+               </center>  
+             </div>
+  <br>      <br>                   <center>
+                                <a href="/register" class="btn btn-success btn-block" > <h3> je participe </h3></a>
+                            </center>
+                            <br>
+</div>
+<br>  <br> 
+<center><h2>La sagesse de tout l’univers se trouve dans une tasse de thé.</h2></center>
+<center><p style="font-size:16px">Thé Tip Top est une jeune entreprise fondée par un groupe d’amis pharmaciens ayant fait leurs études en Angleterre et passionnés de thé. De retour en France, la passion grandissante a fait
+germer l’idée de produire un thé bio et fait maison.
+L’objectif est clair: faire la promotion de gammes de thés de très grande qualité avec des
+mélanges signatures de l’entreprise, des thés détox, des thés blancs, des thés légumes, infusions,
+etc</p></center>
+
+
+    
+</div>
+</div>
+
+<script>
+
+
+
+   
+</script>
+{% endblock %}

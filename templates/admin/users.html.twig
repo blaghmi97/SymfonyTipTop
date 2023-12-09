@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Thé Tiotop{% endblock %}
+
+{% block stylesheets %}
+    
+
+{% endblock %}
+
+{% block body %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topSideBar">
+  <div class="container">
+    <a class="navbar-brand" href="/admin">TeaTipTop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/employe">Gestion des gains</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/users" >Liste des participants</a>
+            </li>
+
+                 {% if app.user.roles[0]== "ROLE_ADMIN" %}
+                        <li class="nav-item">
+                <a class="nav-link" href="/admin/employes" >Liste des employés</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/groslot">Le gros lot</a>
+            </li>
+                 {% endif %}
+      </ul>
+      <form class="d-flex">
+      <ul class="navbar-nav me-auto">
+       <li class="nav-item d-flex">
+                <a class="nav-link" style="color:white;" href="/profil">Mon profil</a>
+            </li>
+        <li class="nav-item d-flex">
+                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+            </li>
+            </ul>
+      </form>
+    </div>
+  </div>  
+</nav>
+
+
+
+<br><br>
+
+
+  <center>   <h1>Liste des participants</h1>   <a href="{{path('Mails')}}" class="btn btn-success">Télécharger</a></center>
+<br> <hr> <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Pays</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+        
+
+        {% for user in users %}
+            <tr>
+            
+            {% if user.roles[0]== "ROLE_USER" %}
+                <td>{{ user.surname }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+               <td>{{ user.address }}</td>
+                <td>{{ user.city }} </td>
+                <td>{{ user.country }} </td>
+                   
+                <td>
+                {% if app.user.roles[0]== "ROLE_ADMIN" %}
+                <a  class="btn btn-info"  href="{{path('participanttouser', { 'id': user.id })}}">Rendre user</a>
+                    {% endif %}   
+                   <a onclick="return confirm('Vouler vraiment supprimer ce compte !')" class="btn btn-danger" href="{{path('deleteparticipant', { 'id': user.id })}}" >Supprimer</a>
+                </td>
+            
+              
+            </tr>
+            {% endif %}   
+        {% endfor %}
+        </tbody>
+    </table>
+    
+
+
+
+
+
+
+
+{% endblock %}

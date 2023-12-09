@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Thé Tiotop{% endblock %}
+
+{% block stylesheets %}
+    
+
+{% endblock %}
+
+{% block body %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topSideBar">
+  <div class="container">
+    <a class="navbar-brand" href="/admin">TeaTipTop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/employe">Gestion des gains</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/users" >Liste des participants</a>
+            </li>
+                        <li class="nav-item">
+                <a class="nav-link" href="/admin/employes" >Liste des employés</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/groslot">Le gros lot</a>
+            </li>
+            
+      </ul>
+      <form class="d-flex">
+      <ul class="navbar-nav me-auto">
+       <li class="nav-item d-flex">
+                <a class="nav-link" style="color:white;" href="/profil">Mon profil</a>
+            </li>
+        <li class="nav-item d-flex">
+                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+            </li>
+            </ul>
+      </form>
+    </div>
+  </div>  
+</nav>
+
+
+
+<br><br>
+
+
+    <div class="container" >
+        <div class="justify-content-center row">
+            <div class="col-md-8" >
+                <div class="card-group" >
+                    <div class="text-white cardSubmitCodeCadeau py-5 d-md-down-none card" style="background-color: rgba(0, 0, 245, 0.5)">
+                        <div class="text-center card-body">
+                            <div class="col-12 ">
+                           
+                            <div class="row">
+                                <h2 class="text-white">Le tirage au sort du gros lot aura lieu le {{date|date('d-m-Y')}}.</h2>
+                            </div>
+                         
+                            {% if user == null %}
+                            <div class="row">
+                            <h2 class="text-white">Si vous voulez lancer le tirage au sort du gros lot veuillez cliquer sur le button </h2>
+                            </div>
+                                <br><br>
+                                <a href="/admin/groswin" class="btn btn-success btn-block">Lancer </a>
+                            {% endif %}
+                          
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                      {% if user %}
+                     <div class="col-md-8" >
+                      <br><br>
+                <div class="card-group" >
+                    <div class="text-black cardSubmitCodeCadeau py-5 d-md-down-none card" >
+                        <div class="text-center card-body">
+                            <div class="col-12 ">
+                          
+                            <div class="row">
+                                <h2 >Le gagnant du gros lot de 360€ est : {{ user.user.surname}} {{ user.user.name}}</h2>
+                            </div>
+
+                           
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div> 
+
+                        <br><br>
+
+                         <div class="card-group" >
+                    <div class="text-black cardSubmitCodeCadeau py-5 d-md-down-none card" >
+                        <div class="text-center card-body">
+
+                        {% for message in app.session.flashbag.get('refus') %}
+                        <div class="alert alert-dismissible alert-danger">
+                        <h4 class="alert-heading"> {{ message }}</h4>
+                        </div>
+                        <br>
+                        {% endfor %}
+
+
+                            <div class="col-12 ">
+                          <form action="{{path('newgame') }}" method="post">
+                            <div class="row">
+                            <div class="col-4">
+                               <label for="datejeu" classe="form-label">Date de début du jeu concours :</label>
+                            </div>
+                            <div class="col-8">
+
+                               <input type="date" classe="form-control" id="dt" name="datejeu" required/>
+                            </div>
+                             </div>
+                           <br><br>
+                               <input type="submit" value="Lance un nouveau jeu" class="btn btn-success">
+                            
+                           
+
+                           </form>
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div> 
+                        {% endif %}
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+
+<br><br> <br>
+
+
+
+        
+ 
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+{% endblock %}

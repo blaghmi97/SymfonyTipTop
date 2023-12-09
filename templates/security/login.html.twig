@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Thé TipTop | Jeu Concours{% endblock %}
+        {% block stylesheets %}
+        
+       
+        {% endblock %}
+{% block body %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity:0.85;">
+  <div class="container">
+    <a class="navbar-brand" href="/">TeaTipTop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+       
+    
+      </ul>
+      <form class="d-flex">
+         <li class="nav-item d-flex">
+              <b>  <a class="nav-link" style="color:white;" href="/register">Inscription</a></b>
+            </li>
+      </form>
+    </div>
+  </div>  
+</nav>
+
+                   
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+ <div class="app d-flex flex-row align-items-center">
+    <div class="container">
+        <div class="justify-content-center row">
+            <div class="col-md-9 col-lg-7 col-xl-6">
+                <div class="card border-primary mb-3" style="background-color: rgba(245, 245, 245, 0.9)">
+                    <div class="card-body" >
+                       <center> <h1>Se connecter :</h1> </center>
+                        <hr />
+                                                    <form method="post">
+                                {% if error %}
+                                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                {% endif %}
+                        <br/>
+                                
+                                <div class="mb-3 input-group">
+                                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="email" autocomplete="email" required autofocus>
+                                </div>
+                                <br/>
+                                <div class="mb-2 input-group">
+                                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="mot de passe" autocomplete="current-password" required>
+                                </div>
+                                <br/>
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                                <div class="row mt-3">
+                                        <button type="submit" class=" btn btn-success buttonSubmitLogin btn-block">Se connecter</button>
+                                </div>
+                                
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<br><br><br>
+<script>
+
+
+
+   
+</script>
+{% endblock %}

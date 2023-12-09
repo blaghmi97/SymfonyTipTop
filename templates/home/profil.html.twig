@@ -1,0 +1,191 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="topSideBar">
+  <div class="container">
+
+
+   
+       
+
+            {% if app.user.roles[0]== "ROLE_ADMIN" %}
+ <a class="navbar-brand" href="/admin">TeaTipTop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/employe">Gestion des gains</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/users" >Liste des participants</a>
+            </li>
+                        <li class="nav-item">
+                <a class="nav-link" href="/admin/employes" >Liste des employés</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/groslot">Le gros lot</a>
+            </li>
+
+          {% elseif app.user.roles[0]== "ROLE_EMPLOYE" %}
+                            <a class="navbar-brand" href="/employe">TeaTipTop</a>
+                          
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/employe">Gestion des gains</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/users" >Liste des participants</a>
+            </li>
+          {% elseif app.user.roles[0]== "ROLE_USER" %}
+    <a class="navbar-brand" href="/">TeaTipTop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+         <li class="nav-item">
+                <a class="nav-link" href="/" id="ticketsRecord">Mes gains</a>
+            </li>
+            
+      </ul>
+            {% endif %}
+      </ul>
+      <form class="d-flex">
+  <ul class="navbar-nav me-auto">
+       <li class="nav-item d-flex">
+                <a class="nav-link" style="color:white;" href="/logout">Mon profil</a>
+            </li>
+        <li class="nav-item d-flex">
+                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+            </li>
+            </ul>
+      </form>
+    </div>
+  </div>  
+</nav>
+<br><br>
+<br> <br> <br>
+
+<div class="app d-flex flex-row align-items-center">
+    <div class="container">
+        <div class="justify-content-center row">
+            <div class="col-md-8 col-lg-8 col-xl-8">
+                <div class="card border-primary mb-3" style="background-color: rgba(245, 245, 245, 0.9)">
+                    <div class="card-body" >
+                       <center> <h1>Mon Profil</h1> </center>
+                        <hr />
+                       
+                            <div class="row">
+                              <div class="col-5">
+                                    <div class="input-group">
+                                 <b>     <label style="font-size:18px">Prénom :<label></b>
+                                    </div>
+                               </div>
+                               <div class="col-7">
+                                <div class="input-group">
+                                    <label style="font-size:18px">{{app.user.surname}}<label>
+                                </div>
+                               </div>
+                            </div>
+<br>
+                          <div class="row">
+                              <div class="col-5">
+                                    <div class="input-group">
+                                <b>      <label style="font-size:18px">Nom :<label></b>
+                                    </div>
+                               </div>
+                               <div class="col-7">
+                                <div class="input-group">
+                                    <label style="font-size:18px">{{app.user.name}}<label>
+                                </div>
+                               </div>
+                            </div>
+
+                            <br>
+                          <div class="row">
+                              <div class="col-5">
+                                    <div class="input-group">
+                                <b>  <label style="font-size:18px">Adresse :<label> </b>
+                                    </div>
+                               </div>
+                               <div class="col-7">
+                                <div class="input-group">
+                                    <label style="font-size:18px">{{app.user.address}}<label>
+                                </div>
+                               </div>
+                            </div>
+                                                        <br>
+                          <div class="row">
+                              <div class="col-5">
+                                    <div class="input-group">
+                                 <b>     <label style="font-size:18px">Ville :<label></b>
+                                    </div>
+                               </div>
+                               <div class="col-7">
+                                <div class="input-group">
+                                    <label style="font-size:18px">{{app.user.city}}<label>
+                                </div>
+                               </div>
+                            </div>
+                                                        <br>
+                          <div class="row">
+                              <div class="col-5">
+                                    <div class="input-group">
+                                  <b>    <label style="font-size:18px">Pays :<label></b>
+                                    </div>
+                               </div>
+                               <div class="col-7">
+                                <div class="input-group">
+                                    <label style="font-size:18px">{{app.user.country}}<label>
+                                </div>
+                               </div>
+                            </div>
+
+                                                             <br>
+                          <div class="row">
+                              <div class="col-5">
+                                    <div class="input-group">
+                                  <b>    <label style="font-size:18px">Email :<label></b>
+                                    </div>
+                               </div>
+                               <div class="col-7">
+                                <div class="input-group">
+                                    <label style="font-size:18px">{{app.user.email}}<label>
+                                </div>
+                               </div>
+                            </div>
+
+
+                                                             <br>
+                          <div class="row">
+                              <div class="col-5">
+                                    <div class="input-group">
+                                  <b>    <label style="font-size:18px">Statut :<label></b>
+                                    </div>
+                               </div>
+                               <div class="col-7">
+                                <div class="input-group">
+                                    <label style="font-size:18px">{{app.user.roles[0]}}<label>
+                                </div>
+                               </div>
+                               <br>
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br><br><br>
+{% endblock %}
