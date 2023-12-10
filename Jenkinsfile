@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                checkout scm
+                sh 'sudo rm -r /var/jenkins_home/workspace/CICDWORKFLOW/*'
+                git branch: 'main', url: 'https://github.com/blaghmi97/SymfonyTipTop' 
             }
         }
 
