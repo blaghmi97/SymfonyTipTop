@@ -37,7 +37,7 @@ pipeline {
                     def composeFilePath = "${env.WORKSPACE}/${composeFile}"
 
                     // Deploy the application
-                    sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} down"
+                    sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} down --volumes"
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} -p ${env.BRANCH_NAME} up -d"
                 }
             }
