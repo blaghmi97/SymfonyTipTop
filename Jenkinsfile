@@ -9,9 +9,8 @@ pipeline {
         stage('Prepare Workspace') {
             steps {
                 script {
-                    // Adjust permissionss on Jenkins workspace
-                    sh "sudo chown -R jenkins:jenkins ${env.WORKSPACE}"
-                    sh "sudo chmod -R 755 ${env.WORKSPACE}"
+                    // Adjust permissions on Jenkins workspace
+                    sh "sudo chmod -R 777 ${env.WORKSPACE}"
                 }
             }
         }
@@ -56,8 +55,8 @@ pipeline {
         stage('Clear Symfony Cache') {
             steps {
                 script {
-                    // Replace with your actual PHP container name
-                    def phpContainerName = 'symfony_app_main' // Adjust this to match your actual PHP container name
+                    // Determine PHP container name based on branch
+                    def phpContainerName = "symfony_app_${env.BRANCH_NAME}"
 
                     // Clear cache
                     sh "docker exec ${phpContainerName} php /var/www/bin/console cache:clear"
