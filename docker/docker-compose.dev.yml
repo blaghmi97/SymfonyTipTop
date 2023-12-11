@@ -1,0 +1,46 @@
+version: '3'
+services:
+  app:
+    image: blaghmi97/symfonyapp:dev
+    container_name: symfony_app_dev
+    volumes:
+      - ${WORKSPACE_DIR}:/var/www
+    depends_on:
+      - database
+    networks:
+      - symfony
+
+  database:
+    image: mysql:latest
+    container_name: symfony_mysql_dev
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: db_project
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ${WORKSPACE_DIR}/loto.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - symfony
+
+  webserver:
+    image: nginx:alpine
+    container_name: symfony_webserver_dev
+    volumes:
+      - ${WORKSPACE_DIR}:/var/www
+      - ${WORKSPACE_DIR}/nginx/default.dev.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - symfony
+    ports:
+      - "80:80"
+networks:
+  symfony:
+
+
+volumes:
+  db_data:
