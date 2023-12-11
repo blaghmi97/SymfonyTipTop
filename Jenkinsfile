@@ -6,10 +6,19 @@ pipeline {
     }
 
     stages {
+        stage('Prepare Workspace') {
+            steps {
+                script {
+                    // Adjust permissions on Jenkins workspace
+                    sh "sudo chown -R jenkins:jenkins ${env.WORKSPACE}"
+                    sh "sudo chmod -R 755 ${env.WORKSPACE}"
+                }
+            }
+        }
+
         stage('Checkout Code') {
             steps {
-                sh 'sudo rm -r /var/jenkins_home/workspace/CICDWORKFLOW/*'
-                git branch: 'main', url: 'https://github.com/blaghmi97/SymfonyTipTop' 
+                checkout scm
             }
         }
 
