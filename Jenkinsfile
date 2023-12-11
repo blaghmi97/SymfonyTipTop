@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Adjust permissions on Jenkins workspace
-                    sh "sudo chmod -R 777 ${env.WORKSPACE}"
+                    sh "sudo chmod -R 777 /var"
                 }
             }
         }
