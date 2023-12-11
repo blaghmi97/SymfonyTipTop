@@ -9,7 +9,7 @@ pipeline {
         stage('Prepare Workspace') {
             steps {
                 script {
-                    // Adjust permissions on Jenkins workspace
+                    // Adjust permissionss on Jenkins workspace
                     sh "sudo chown -R jenkins:jenkins ${env.WORKSPACE}"
                     sh "sudo chmod -R 755 ${env.WORKSPACE}"
                 }
