@@ -6,15 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Prepare Workspace') {
-            steps {
-                script {
-                    // Adjust permissions on Jenkins workspace
-                    sh "sudo chmod -R 777 /var/lib/jenkins/workspace/"
-                }
-            }
-        }
-
         stage('Checkout Code') {
             steps {
                 checkout scm
@@ -55,11 +46,20 @@ pipeline {
         stage('Clear Symfony Cache') {
             steps {
                 script {
-                    // Determine PHP container name based on branch
-                    def phpContainerName = "symfony_app_${env.BRANCH_NAME}"
+                    // Replace with your actual PHP container name
+                    def phpContainerName = 'symfony_app_main' // Adjust this to match your actual PHP container name
 
                     // Clear cache
                     sh "docker exec ${phpContainerName} php /var/www/bin/console cache:clear"
+                }
+            }
+        }
+        stage('Prepare Workspace') {
+            steps {
+                script {
+                    // Adjust permissionss on Jenkins workspace
+                    
+                    sh "sudo chmod -R 777 /var/lib/jenkins/workspace/"
                 }
             }
         }
