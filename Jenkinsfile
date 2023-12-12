@@ -47,7 +47,7 @@ pipeline {
             steps {
                 script {
                     // Replace with your actual PHP container name
-                    def phpContainerName = 'symfony_app_main' // Adjust this to match your actual PHP container name
+                    def phpContainerName = "symfony_app_${env.BRANCH_NAME}"
 
                     // Clear cache
                     sh "docker exec ${phpContainerName} php /var/www/bin/console cache:clear"
