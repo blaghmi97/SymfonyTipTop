@@ -6,16 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Prepare Workspace') {
-            steps {
-                script {
-                    // Adjust permissionss on Jenkins workspace
-                    
-                    sh "sudo chmod -R 777 /var/lib/jenkins/workspace/"
-                }
-            }
-        }
-
         stage('Checkout Code') {
             steps {
                 checkout scm
@@ -61,6 +51,15 @@ pipeline {
 
                     // Clear cache
                     sh "docker exec ${phpContainerName} php /var/www/bin/console cache:clear"
+                }
+            }
+        }
+        stage('Prepare Workspace') {
+            steps {
+                script {
+                    // Adjust permissionss on Jenkins workspace
+                    
+                    sh "sudo chmod -R 777 /var/lib/jenkins/workspace/"
                 }
             }
         }
