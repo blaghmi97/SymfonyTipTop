@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REPO_NAME = "blaghmi97/symfonyapp" // DockerHub repository name
+        REPO_NAME = "blaghmi97/symfonyapp" // DockerHub repository namee
     }
 
     stages {
