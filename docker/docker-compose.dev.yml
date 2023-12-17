@@ -55,6 +55,9 @@ services:
 networks:
   symfony:
   mysql-phpmyadmin:
+    name: mysql-phpmyadmin
+        # use the bridge driver
+    driver: bridge
 
 
 volumes:
