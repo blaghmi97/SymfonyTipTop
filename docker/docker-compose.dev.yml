@@ -13,11 +13,11 @@ services:
   database:
     image: mysql:latest
     container_name: symfony_mysql_dev
+    command: "--innodb_use_native_aio=0"
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: db_project
       MYSQL_PASSWORD: password
-    restart: always
     ports:
       - "3306:3306"
     volumes:
@@ -55,9 +55,6 @@ services:
 networks:
   symfony:
   mysql-phpmyadmin:
-    name: mysql-phpmyadmin
-        # use the bridge driver
-    driver: bridge
 
 
 volumes:
