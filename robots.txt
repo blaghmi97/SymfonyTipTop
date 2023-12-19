@@ -1,0 +1,8 @@
+User-agent: *
+Disallow:/admin
+Disallow:/participanttouser
+Disallow:/employetouser
+Disallow:/newgame
+Disallow:/employe
+Allow: /
+Sitemap: http://www.dsp-archiwebf21-yb.fr/SEO/sitemap.xml
