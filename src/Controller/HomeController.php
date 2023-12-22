@@ -46,6 +46,15 @@ class HomeController extends AbstractController
 
     }
 
+   /**
+     * @Route("/histoire", name="histoire")
+     */
+    public function histoireAction(Request $request): Response
+    {
+        
+        return $this->render('home/histoire.html.twig');
+    }     
+
     /**
      * @Route("/bienvenu", name="app_bienvenu")
      */
