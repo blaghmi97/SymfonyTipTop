@@ -45,6 +45,7 @@ class HomeController extends AbstractController
         
 
     }
+
    /**
      * @Route("/histoire", name="histoire")
      */
@@ -52,7 +53,8 @@ class HomeController extends AbstractController
     {
         
         return $this->render('home/histoire.html.twig');
-    }   
+    }     
+
     /**
      * @Route("/bienvenu", name="app_bienvenu")
      */

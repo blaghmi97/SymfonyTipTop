@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>http://dsp-archiwebf21-yb.fr/</loc>
+      <loc>http://dev.dsp-archiwebf21-yb.fr/</loc>
    </url>
    <url>
-      <loc>http://dsp-archiwebf21-yb.fr/login</loc>
+      <loc>http://dev.dsp-archiwebf21-yb.fr/login</loc>
    </url>
    <url>
-      <loc>http://dsp-archiwebf21-yb.fr/register</loc>
+      <loc>http://dev.dsp-archiwebf21-yb.fr/register</loc>
+   </url>
+   <url>
+      <loc>http://dev.dsp-archiwebf21-yb.fr/histoire</loc>
    </url>
 </urlset>

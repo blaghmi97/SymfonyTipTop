@@ -1,7 +1,0 @@
-User-agent: *
-
-Disallow: /admin/
-Disallow: /employe/
-
-User-agent: *
-Sitemap: http://dsp-archiwebf21-yb.fr/public/SEO/sitemap.xml
