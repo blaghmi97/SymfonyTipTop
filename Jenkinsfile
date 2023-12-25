@@ -4,12 +4,6 @@ pipeline {
     environment {
         REPO_NAME = "blaghmi97/symfonyapp" // DockerHub repository namee
     }
-          options {
-
-    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
-
-  }
-
     stages {
         stage('Checkout Code') {
             steps {
