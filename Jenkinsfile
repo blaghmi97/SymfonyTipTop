@@ -4,7 +4,19 @@ pipeline {
     environment {
         REPO_NAME = "blaghmi97/symfonyapp" // DockerHub repository namee
     }
-        
+
+        stage('Prepare Workspace') {
+            steps {
+                script {
+                    // Adjust permissionss on Jenkins workspace
+                    
+                    sh "sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/"
+                }
+            }
+        }
+
+
+    
     stages {
         stage('Checkout Code') {
             steps {
@@ -55,14 +67,6 @@ pipeline {
                 }
             }
         }
-        stage('Prepare Workspace') {
-            steps {
-                script {
-                    // Adjust permissionss on Jenkins workspace
-                    
-                    sh "sudo chmod -R 777 /var/lib/jenkins/workspace/"
-                }
-            }
-        }
+
     }
 }
