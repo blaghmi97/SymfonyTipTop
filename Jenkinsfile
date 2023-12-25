@@ -2,21 +2,9 @@ pipeline {
     agent any
 
     environment {
-        REPO_NAME = "blaghmi97/symfonyapp" // DockerHub repository namee
+        REPO_NAME = "blaghmi97/symfonyapp" // DockerHub repository name
     }
 
-        stage('Prepare Workspace') {
-            steps {
-                script {
-                    // Adjust permissionss on Jenkins workspace
-                    
-                    sh "sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/"
-                }
-            }
-        }
-
-
-    
     stages {
         stage('Checkout Code') {
             steps {
@@ -29,7 +17,6 @@ pipeline {
                 script {
                     sh "docker build -t ${REPO_NAME}:${env.BRANCH_NAME} ."
                     sh "sudo docker push ${REPO_NAME}:${env.BRANCH_NAME}"
-                     
                 }
             }
         }
@@ -67,6 +54,14 @@ pipeline {
                 }
             }
         }
-
+        stage('Prepare Workspace') {
+            steps {
+                script {
+                    // Adjust permissionss on Jenkins workspace
+                    
+                    sh "sudo chmod -R 777 /var/lib/jenkins/workspace/"
+                }
+            }
+        }
     }
 }
