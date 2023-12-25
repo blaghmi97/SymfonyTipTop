@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                sh "sudo chmod -R 777 /var/lib/jenkins/workspace/"
+               
                 checkout scm
             }
         }
