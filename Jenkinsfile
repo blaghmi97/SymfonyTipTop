@@ -5,12 +5,7 @@ pipeline {
         REPO_NAME = "blaghmi97/symfonyapp" // DockerHub repository name
     }
 
-    stages {
-        stage('Checkout Code') {
-            steps {
-                checkout scm
-            }
-        }
+
 
         stage('Build and Push Docker Image') {
             steps {
