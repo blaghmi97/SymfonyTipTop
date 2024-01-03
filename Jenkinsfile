@@ -54,6 +54,15 @@ pipeline {
                 }
             }
         }
+
+
+      stage('SonarQube Analisys') {
+            steps {
+                withSonarQubeEnv('sonarqube-8.9.2') {
+                    sh "mvn sonar:sonar"
+                }
+            }
+        }
         stage('Prepare Workspace') {
             steps {
                 script {
