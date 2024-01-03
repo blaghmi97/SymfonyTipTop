@@ -55,18 +55,6 @@ pipeline {
             }
         }
 
-      stage('Compile-package') {
-            def mvnHome = tool name: 'maven-3', type: 'maven'
-            sh "${mvnHome}/bin/mvn package"
-        }
-        
-      stage('SonarQube Analisys') {
-          def mvnHome = tool name: 'maven-3', type: 'maven'
-                withSonarQubeEnv('sonar') {
-                    sh "${mvnHome}/bin/mvn sonar:sonar"
-                }
-            
-        }
         stage('Prepare Workspace') {
             steps {
                 script {
