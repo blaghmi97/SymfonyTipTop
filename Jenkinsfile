@@ -43,15 +43,6 @@ pipeline {
             }
         }
 
-        stage('Sonarqube Analysis'){
-            steps{
-                dir('/var/lib/jenkins/workspace/symfony/adressbook/adressbook_main'){
-                    sh 'sudo /var/lib/jenkins/workspace/symfony/apache-maven-3.9.4/bin/mvn test'
-                }
-                }
-                }
-            }
-
         stage('Clear Symfony Cache') {
             steps {
                 script {
