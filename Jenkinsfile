@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     sh "docker build -t ${REPO_NAME}:${env.BRANCH_NAME} ."
-                    sh "sudo docker push ${REPO_NAME}:${env.BRANCH_NAME}"
+                    sh "docker push ${REPO_NAME}:${env.BRANCH_NAME}"
                 }
             }
         }
