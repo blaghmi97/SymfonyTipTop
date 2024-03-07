@@ -15,7 +15,7 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    sh "docker build -t ${REPO_NAME}:${env.BRANCH_NAME} ."
+                    
                     
                 }
             }
