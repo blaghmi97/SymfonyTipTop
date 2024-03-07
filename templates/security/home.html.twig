@@ -14,6 +14,55 @@
   margin: 0 auto;
 }
 
+.cookie-container {
+  position: fixed;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  background: #2f3640;
+  color: #f5f6fa;
+  padding: 0 32px;
+  box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+
+  transition: 400ms;
+}
+.cookie-container.active {
+  bottom: 0;
+}
+
+.cookie-container a {
+  color: #f5f6fa;
+}
+
+.cookie-btn {
+  background: #ffffff;
+  border: 0;
+  padding: 12px 48px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#ck1{
+color: #ffffff !important;
+}
+#ck2{
+  color: #ffffff !important;
+}
+#ck3{
+  color: #000000 !important;
+}
+.hide {
+  visibility: hidden;
+  bottom: 0;
+
+}
+.show {
+  visibility: visible;
+  bottom: 15%;
+}
+
         </style>
        
         {% endblock %}
@@ -22,7 +71,7 @@
 
 
 
-
+<div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity:0.85;">
   <div class="container">
     <a class="navbar-brand" href="/">TeaTipTop</a>
@@ -118,10 +167,33 @@ etc</p></center>
 </div>
 </div>
 
+ <div class="cookie-container show" id="cookiePopup">
+     <p style="font-size:25px" id="ck1">Controler l'utilisation de vos données personnelles.</p>
+      <p id="ck2">
+        Nous utilisons des technologies comme les coockies pour stocker et/ou accéder à des informations sur le terminal,comme des identifiants uniques,traiter des données personnelles non sensibles comme l'adresse IP.
+      </p>
+
+      <button class="cookie-btn" id="ck3">
+        Accepter et fermer
+      </button>
+    </div>
+</div>
 <script>
+let popUp = document.getElementById("cookiePopup");
+document.getElementById("ck3").addEventListener("click", () => {
+  popUp.classList.add("hide");
+  popUp.classList.remove("show");
+  localStorage.setItem("cookieBannerDisplayed", "true");
+});
 
 
+  if (localStorage.getItem("cookieBannerDisplayed")) {
+      popUp.classList.remove("show");
+      popUp.classList.add("hide");
+      
+  }
 
-   
+
 </script>
+
 {% endblock %}
