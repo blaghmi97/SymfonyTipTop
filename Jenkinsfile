@@ -12,14 +12,7 @@ pipeline {
             }
         }
 
-        stage('Build and Push Docker Image') {
-            steps {
-                script {
-                    
-                    
-                }
-            }
-        }
+
 
         stage('Deploy to Environment') {
             steps {
