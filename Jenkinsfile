@@ -47,7 +47,7 @@ pipeline {
 
         stage('Test') {
             steps {
-               sh 'cd /var/lib/jenkins/workspace/thetiptop_main_main &&  ./vendor/bin/phpunit --log-junit result.xml'
+               sh 'cd /var/lib/jenkins/workspace/thetiptop_main_main &&  phpunit --log-junit result.xml'
             }
         }
 
