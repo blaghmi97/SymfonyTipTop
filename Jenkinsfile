@@ -44,6 +44,14 @@ pipeline {
             }
         }
 
+
+        stage('Test') {
+            steps {
+               sh 'cd /var/jenkins_home/workspace/thetiptop_main_main &&  ./vendor/bin/phpunit --log-junit result.xml'
+            }
+        }
+
+
         stage('Clear Symfony Cache') {
             steps {
                 script {

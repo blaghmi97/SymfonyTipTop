@@ -15,6 +15,10 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
+
 
 class HomeController extends AbstractController
 {         
@@ -46,6 +50,30 @@ class HomeController extends AbstractController
 
     }
 
+
+   /**
+     * @Route("/mail", name="mail")
+     */
+    public function sendmailAction(Request $request,MailerInterface $mailer)
+    {
+
+        
+       $mail = (new Email())
+          ->from($request->request->get('mail'))
+          ->to('blaghmi97@gmail.com')
+          ->subject($request->get('objet'))
+          ->html($request->get('message'));
+ 
+       $mailer->send($mail);
+       $this->addFlash('Success',"Votre mail a été bien envoyé ! ");  
+       return $this->render('home/contact.html.twig');
+
+    }
+
+
+
+
+
    /**
      * @Route("/histoire", name="histoire")
      */
@@ -53,7 +81,25 @@ class HomeController extends AbstractController
     {
         
         return $this->render('home/histoire.html.twig');
-    }     
+    }  
+    
+    
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contactAction(Request $request): Response
+    {
+        
+        return $this->render('home/contact.html.twig');
+    }  
+    /**
+     * @Route("/mentions", name="mentions")
+     */
+    public function mentionsAction(Request $request): Response
+    {
+        
+        return $this->render('home/mentions.html.twig');
+    }  
 
     /**
      * @Route("/bienvenu", name="app_bienvenu")
@@ -90,9 +136,9 @@ class HomeController extends AbstractController
         return $this->render('home/profil.html.twig');
     }
             /**
-     * @Route("/mentions", name="mentions")
+     * @Route("/cgv", name="cgv")
      */
-    public function montionAction(Request $request): Response
+    public function cgvAction(Request $request): Response
     {
         
         return $this->render('home/cgv.html.twig');
@@ -191,4 +237,6 @@ function checkvalue($value, $lot1, $lot2, $lot3, $lot4, $lot5){
     else if($lot5 <= 0 && $lot4 <= 0 && $lot3 <= 0 && $lot2 > 0){return 2;}
     else if($lot5 <= 0 && $lot4 <= 0 && $lot3 <= 0 && $lot2 <= 0 && $lot1 > 0){return 1;}
     }
+
+
 }
