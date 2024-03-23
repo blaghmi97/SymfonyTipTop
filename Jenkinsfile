@@ -15,7 +15,7 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    sh "cd /var/lib/jenkins/workspace/thetiptop_main_main"
+                    sh "cd /var/lib/jenkins/workspace/symfony_dev"
                     sh "docker build -t ${REPO_NAME}:${env.BRANCH_NAME} ."
                     sh "sudo docker push ${REPO_NAME}:${env.BRANCH_NAME}"
                 }
