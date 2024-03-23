@@ -1,0 +1,279 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* home/mentions.html.twig */
+class __TwigTemplate_4d0cecaeb4a9712eada12a55cf7afbc1 extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home/mentions.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "home/mentions.html.twig"));
+
+        // line 1
+        echo "<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=\"UTF-8\">
+
+
+        <meta charset=\"UTF-8\" />
+        <title> Mentions légales </title>
+        <meta name=\"description\" content=\"Jeu concours The TipTop.\"/>
+        <meta name=\"keywords\" content=\"TipTop ,Thé, jeu concours\"/>
+        <meta name=\"ROBOTS\" content=\"INDEX, FOLLOW\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+        <meta name=\"author\" content=\"The TipTop\">
+
+
+
+
+        <link rel=\"icon\" href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/images/logo1.ico"), "html", null, true);
+        echo "\">
+
+        <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
+        <link rel=\"stylesheet\" href=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bootstrap.css"), "html", null, true);
+        echo "\">
+        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor\" crossorigin=\"anonymous\">
+
+
+    </head>
+
+<body>
+<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\" style=\"opacity:0.85;\">
+  <div class=\"container\">
+    <a class=\"navbar-brand\" href=\"/\">Thé TipTop</a>
+    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+      <span class=\"navbar-toggler-icon\"></span>
+    </button>
+  </div>  
+</nav>
+<br>
+ <div class=\"container\" >
+<center><h2>Mentions légales : </h2></center>
+<br><br><br><br>
+<h2>1. Présentation Du Site Internet </h2>
+<p>Le site thethetop.fr est la propriété exclusive de SA Thé Tip Top, qui l'édite.</p>
+<p>Thé Tip Top SA au capital de : 150 000 €</p>
+<p>Tél : 01 74 41 05 21</p>
+<p>Adresse : 18 rue Léon Frot 75011 Paris</p>
+<p>Immatriculée au Registre du Commerce et des Sociétés de PARIS B 761900043 sous le numéro : 76382761900043</p>
+<p>Numéro TVA intracommunautaire : FR27763827619</p>
+<p>Adresse de courrier électronique : contact@thetiptop.fr</p>
+<p>Directeur de la publication : Mr Eric Bourdon</p>
+<p>Contactez le responsable de la publication : e.bourdon@furiousducks.fr</p>
+
+<br>
+<h2>2. Conditions Générales D’utilisation Du Site Et Des Services Proposés​</h2>
+
+<p>
+Le Site constitue une œuvre de l’esprit protégée par les dispositions du Code de la Propriété Intellectuelle et des Réglementations Internationales applicables. Le Client ne peut en aucune manière réutiliser, céder ou exploiter pour son propre compte tout ou partie des éléments ou travaux du Site.
+</p>
+<p>
+L’utilisation du site https://dsp-archiwebf21-yb.fr implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. 
+Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site https://dsp-archiwebf21-yb.fr sont donc invités à les consulter de manière régulière.
+</p>
+<p>Ce site internet est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par https://dsp-archiwebf21-yb.fr est mis à jour régulièrement par https://dsp-ddm-o21b-g4.fr/ responsable. 
+De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.
+</p>
+<br>
+<h2>3. Description Des Services Fournis</h2>
+<p>
+Le site internet https://dsp-archiwebf21-yb.fr a pour objet de fournir une information concernant l’ensemble des activités de la société. https://dsp-archiwebf21-yb.fr s’efforce de fournir sur le site https://dsp-archiwebf21-yb.fr des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des oublis, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+Toutes les informations indiquées sur le site https://dsp-archiwebf21-yb.fr sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site https://dsp-ddm-o21b-g4.fr/ ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
+<br>
+
+<h2>4. Propriété Intellectuelle Et Contrefaçons</h2>
+<p>
+https://dsp-archiwebf21-yb.fr est propriétaire des droits de propriété intellectuelle et détient les droits d’usage sur tous les éléments accessibles sur le site internet, notamment les textes, images, graphismes, logos, vidéos, icônes et sons.
+
+Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : https://dsp-archiwebf21-yb.fr.
+
+Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+</p>
+<br>
+<h2>5 - Liens hypertextes et cookies </h2>
+<p>
+Le site http://dsp-archiwebf21-yb.fr/ contient des liens hypertextes vers d’autres sites et dégage toute responsabilité à propos de ces liens externes ou des liens créés par d’autres sites vers http://dsp-archiwebf21-yb.fr/.
+
+La navigation sur le site http://dsp-archiwebf21-yb.fr/ est susceptible de provoquer l’installation de cookie(s) sur l’ordinateur de l’utilisateur.
+
+Un \"cookie\" est un fichier de petite taille qui enregistre des informations relatives à la navigation d’un utilisateur sur un site. Les données ainsi obtenues permettent d'obtenir des mesures de fréquentation, par exemple.
+
+Vous avez la possibilité d’accepter ou de refuser les cookies en modifiant les paramètres de votre navigateur. Aucun cookie ne sera déposé sans votre consentement.
+
+Les cookies sont enregistrés pour une durée maximale de 6 mois.
+
+Pour plus d'informations sur la façon dont nous faisons usage des cookies.
+
+</p>
+<br>
+<h2>6. Droit Applicable Et Attribution De Juridiction</h2>
+<p>
+Tout litige en relation avec l’utilisation du site https://dsp-archiwebf21-yb.fr est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.
+</p>
+</div>
+</body>
+";
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "home/mentions.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  68 => 21,  62 => 18,  43 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=\"UTF-8\">
+
+
+        <meta charset=\"UTF-8\" />
+        <title> Mentions légales </title>
+        <meta name=\"description\" content=\"Jeu concours The TipTop.\"/>
+        <meta name=\"keywords\" content=\"TipTop ,Thé, jeu concours\"/>
+        <meta name=\"ROBOTS\" content=\"INDEX, FOLLOW\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+        <meta name=\"author\" content=\"The TipTop\">
+
+
+
+
+        <link rel=\"icon\" href=\"{{ asset('uploads/images/logo1.ico') }}\">
+
+        <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
+        <link rel=\"stylesheet\" href=\"{{ asset('bootstrap.css') }}\">
+        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor\" crossorigin=\"anonymous\">
+
+
+    </head>
+
+<body>
+<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\" style=\"opacity:0.85;\">
+  <div class=\"container\">
+    <a class=\"navbar-brand\" href=\"/\">Thé TipTop</a>
+    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+      <span class=\"navbar-toggler-icon\"></span>
+    </button>
+  </div>  
+</nav>
+<br>
+ <div class=\"container\" >
+<center><h2>Mentions légales : </h2></center>
+<br><br><br><br>
+<h2>1. Présentation Du Site Internet </h2>
+<p>Le site thethetop.fr est la propriété exclusive de SA Thé Tip Top, qui l'édite.</p>
+<p>Thé Tip Top SA au capital de : 150 000 €</p>
+<p>Tél : 01 74 41 05 21</p>
+<p>Adresse : 18 rue Léon Frot 75011 Paris</p>
+<p>Immatriculée au Registre du Commerce et des Sociétés de PARIS B 761900043 sous le numéro : 76382761900043</p>
+<p>Numéro TVA intracommunautaire : FR27763827619</p>
+<p>Adresse de courrier électronique : contact@thetiptop.fr</p>
+<p>Directeur de la publication : Mr Eric Bourdon</p>
+<p>Contactez le responsable de la publication : e.bourdon@furiousducks.fr</p>
+
+<br>
+<h2>2. Conditions Générales D’utilisation Du Site Et Des Services Proposés​</h2>
+
+<p>
+Le Site constitue une œuvre de l’esprit protégée par les dispositions du Code de la Propriété Intellectuelle et des Réglementations Internationales applicables. Le Client ne peut en aucune manière réutiliser, céder ou exploiter pour son propre compte tout ou partie des éléments ou travaux du Site.
+</p>
+<p>
+L’utilisation du site https://dsp-archiwebf21-yb.fr implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. 
+Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site https://dsp-archiwebf21-yb.fr sont donc invités à les consulter de manière régulière.
+</p>
+<p>Ce site internet est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par https://dsp-archiwebf21-yb.fr est mis à jour régulièrement par https://dsp-ddm-o21b-g4.fr/ responsable. 
+De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.
+</p>
+<br>
+<h2>3. Description Des Services Fournis</h2>
+<p>
+Le site internet https://dsp-archiwebf21-yb.fr a pour objet de fournir une information concernant l’ensemble des activités de la société. https://dsp-archiwebf21-yb.fr s’efforce de fournir sur le site https://dsp-archiwebf21-yb.fr des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des oublis, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+Toutes les informations indiquées sur le site https://dsp-archiwebf21-yb.fr sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site https://dsp-ddm-o21b-g4.fr/ ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
+<br>
+
+<h2>4. Propriété Intellectuelle Et Contrefaçons</h2>
+<p>
+https://dsp-archiwebf21-yb.fr est propriétaire des droits de propriété intellectuelle et détient les droits d’usage sur tous les éléments accessibles sur le site internet, notamment les textes, images, graphismes, logos, vidéos, icônes et sons.
+
+Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : https://dsp-archiwebf21-yb.fr.
+
+Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
+</p>
+<br>
+<h2>5 - Liens hypertextes et cookies </h2>
+<p>
+Le site http://dsp-archiwebf21-yb.fr/ contient des liens hypertextes vers d’autres sites et dégage toute responsabilité à propos de ces liens externes ou des liens créés par d’autres sites vers http://dsp-archiwebf21-yb.fr/.
+
+La navigation sur le site http://dsp-archiwebf21-yb.fr/ est susceptible de provoquer l’installation de cookie(s) sur l’ordinateur de l’utilisateur.
+
+Un \"cookie\" est un fichier de petite taille qui enregistre des informations relatives à la navigation d’un utilisateur sur un site. Les données ainsi obtenues permettent d'obtenir des mesures de fréquentation, par exemple.
+
+Vous avez la possibilité d’accepter ou de refuser les cookies en modifiant les paramètres de votre navigateur. Aucun cookie ne sera déposé sans votre consentement.
+
+Les cookies sont enregistrés pour une durée maximale de 6 mois.
+
+Pour plus d'informations sur la façon dont nous faisons usage des cookies.
+
+</p>
+<br>
+<h2>6. Droit Applicable Et Attribution De Juridiction</h2>
+<p>
+Tout litige en relation avec l’utilisation du site https://dsp-archiwebf21-yb.fr est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.
+</p>
+</div>
+</body>
+", "home/mentions.html.twig", "C:\\wamp64\\www\\SymfonyTipTop\\templates\\home\\mentions.html.twig");
+    }
+}

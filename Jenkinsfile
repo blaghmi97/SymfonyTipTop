@@ -15,6 +15,7 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
+                    sh "cd /var/lib/jenkins/workspace/thetiptop_main_main"
                     sh "docker build -t ${REPO_NAME}:${env.BRANCH_NAME} ."
                     sh "sudo docker push ${REPO_NAME}:${env.BRANCH_NAME}"
                 }
@@ -42,6 +43,13 @@ pipeline {
                 }
             }
         }
+
+        stage('Test') {
+            steps {
+               sh 'cd /var/jenkins_home/workspace/thetiptop_dev &&  ./vendor/bin/phpunit --log-junit result.xml'
+            }
+        }
+
 
         stage('Clear Symfony Cache') {
             steps {

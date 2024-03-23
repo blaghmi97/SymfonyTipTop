@@ -38,6 +38,7 @@ services:
       MYSQL_ROOT_PASSWORD: password
     networks:
       - symfony
+      
 
   webserver:
     image: nginx:alpine
