@@ -46,7 +46,7 @@ pipeline {
 
         stage('Test') {
             steps {
-               sh 'cd /var/jenkins_home/workspace/thetiptop_dev &&  ./vendor/bin/phpunit --log-junit result.xml'
+               sh 'cd /var/jenkins_home/workspace/symfony_dev &&  ./vendor/bin/phpunit --log-junit result.xml'
             }
         }
 
