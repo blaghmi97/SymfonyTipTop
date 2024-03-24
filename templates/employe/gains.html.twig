@@ -7,7 +7,7 @@
 {% block body %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="/employe">TeaTipTop </a>
+    <a class="navbar-brand" href="/employe">Thé TipTop </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,7 +20,7 @@
                 <a class="nav-link" style="color:white;" href="/profil">Mon profil</a>
             </li>
         <li class="nav-item d-flex">
-                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+                <a class="nav-link" style="color:white;" href="/logout">Déconnexion</a>
             </li>
             </ul>
       </form>
@@ -81,11 +81,11 @@
         {% for win in wins %}
             <tr>
                 <td>{{win.ticket.title}}</td>
-                <td>{% if win.send == 0 %}<span class="badge bg-warning">Gains pas encore distribué</span> {% else %}<span class="badge bg-info">Gains est déja distribué</span>{% endif %}</td>
+                <td>{% if win.send == 0 %}<span class="badge bg-warning">Gain pas encore distribué</span> {% else %}<span class="badge bg-info">Gain est déja distribué</span>{% endif %}</td>
                 <td>{% if win.send == 0 %}
                 <form method="POST" action="{{path('app_code_send')}}">
                 <input type="hidden" value="{{win.id }}" name="gain_id">
-                <button type="submit" class="btn btn-success btn-l">Donner le gaint</button>
+                <button type="submit" class="btn btn-success btn-l">Donner le gain</button>
                 </form>
         {% endif %}
                 

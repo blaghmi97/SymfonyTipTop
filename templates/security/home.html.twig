@@ -74,7 +74,7 @@ color: #ffffff !important;
 <div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity:0.85;">
   <div class="container">
-    <a class="navbar-brand" href="/">TeaTipTop</a>
+    <a class="navbar-brand" href="/">Thé TipTop</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -121,12 +121,16 @@ color: #ffffff !important;
                 <a class="nav-link" style="color:white;" href="/profil">Mon profil</a>
             </li> 
          <li class="nav-item d-flex">
-                <a class="nav-link" style="color:white;" href="/logout">Déconnection</a>
+                <a class="nav-link" style="color:white;" href="/logout">Déconnexion</a>
          </li>
 
           {% else %}   
          <li class="nav-item d-flex">
-              <b>  <a class="nav-link" style="color:white;" href="/register">Inscription</a></b>
+               <a class="nav-link" style="color:white;" href="/login">Connexion</a>
+            </li>
+            &nbsp;  &nbsp;
+         <li class="nav-item d-flex">
+              <a class="nav-link" style="color:white;" href="/register">Inscription</a>
             </li>
             
            {% endif %}   
@@ -139,22 +143,87 @@ color: #ffffff !important;
 </nav>
 
 <div class="jumbotron"><br>
-  <h1  align="center" style="font-size:45px">The TipTop</h1><br>
-  <h2  align="center" style="font-size:25px">Bienvenue sur Thé TipTop le jeu-concours! Inscrivez-vous et participez.</h2><br>
+  <h1  align="center" style="font-size:45px">Thé TipTop</h1><br>
+  <h2  align="center" style="font-size:25px">Participez et Gagnez avec Notre Jeu-Concours Exclusif de Thé TipTop.</h2>
 <hr class="my-4">
+<center><p style="font-size:20px">À l'occasion de l'ouverture de notre 10ème boutique à Nice, Thé Tip Top célèbre en offrant des récompenses garanties à chaque participation. 
+Découvrez ci-dessous les trésors que vous pourriez débloquer avec votre achat de plus de 49€. Ne manquez pas votre chance de gagner !</p></center>
+<center><p style="font-size:15px"> Un tirage au sort pour remporter un an de thé d'une valeur de 360€ aura lieu après la fin de ce jeu concours. Ne manquez pas votre chance ! </p></center>
  <center>  <p style="font-size:20px">Si vous avez un ticket de caisse ou une facture entre le <b>{{ date.closingDate|date_modify("-30 day")|date('d-m-Y') }} </b> et le <b>{{ date.closingDate|date('d-m-Y') }} </b> et supérieure à 49 € vous êtes éligible à  participer à ce jeu de concours.</p></center> 
               <center>  <p style="font-size:20px">Le grand tirage au sort aura lieu le <b>{{ date.closingDate|date('d-m-Y') }} </b>pour détermier un gagnant parmi les participants d'un an de thé d'une valeur de 360 €.</b> .</p></center> 
-<hr><br>     <div class="col-md-6 offset-md-1">
-                <p style="font-size:18px"><b>- 1 500 000 Cadeaux à gagner :</b>des infuseurs à thé,des boites de 100g d’un thé detox ou infusion,des boites de 100g de thé signature,
-                des coffrets découverte d’une valeur de 39 €,des coffrets découverte d’une valeur de 69 €</p>
-               </center>  
-             </div>
-  <br>      <br>                   <center>
-                                <a href="/register" class="btn btn-success btn-block" > <h3> je participe </h3></a>
-                            </center>
-                            <br>
+<hr><br>     
+
+                <center>
+                  <a href="/register" class="btn btn-success btn-block" > <h3> je participe </h3></a>
+                </center>
+       <br>
 </div>
-<br>  <br> 
+<br> 
+<div class="container">
+<b><h4>Comment jouer ?</h4></b>
+<h5>1. Obtenez un ticket de participation après un achat en magasin ou en ligne.</h5>
+<h5>2. Saisissez le code du ticket pour vérifier votre participation.</h5>
+<h5>3. récupérer vos gains du magasin.</h5>
+</div>
+
+ <br> 
+<div class="container">
+<div class="row justify-content-center">
+<div class="card border-secondary mb-3" style="max-width: 20rem; max-height: 30rem; margin-right: 1em;">
+  <svg  class="d-block user-select-none mt-1" width="100%" height="15"  focusable="false" role="img" preserveAspectRatio="xMidYMid slice" style="font-size:1.125rem;text-anchor:middle">
+    <img src="uploads/images/infuseur.png" alt="Boite de 100g - Thé détox ou infusion"/>
+  </svg>
+<hr>
+<center><h4>Infuseur à thé</h4></center>
+<center><p>60% des tickets offrent un infuseur à thé. Une manière élégante de savourer nos thés bios et handmades.</p></center>
+</div>
+
+<div class="card border-secondary mb-3" style="max-width: 20rem; max-height: 30rem; margin-right: 1em;">
+  <svg  class="d-block user-select-none mt-1" width="100%" height="15"  focusable="false" role="img" preserveAspectRatio="xMidYMid slice" style="font-size:1.125rem;text-anchor:middle">
+    <img src="uploads/images/boitedetox.png" alt="Boite de 100g - Thé détox ou infusion"/>
+  </svg>
+<hr>
+<center><h4>Boite de 100g - Thé détox ou infusion</h4></center>
+<center><p>20% des tickets offrent une boite de 100g d’un thé détox ou d’infusion. Découvrez nos mélanges uniques.</p></center>
+</div>
+
+<div class="card border-secondary mb-3" style="max-width: 20rem; max-height: 30rem;">
+  <svg  class="d-block user-select-none mt-1" width="100%" height="15"  focusable="false" role="img" preserveAspectRatio="xMidYMid slice" style="font-size:1.125rem;text-anchor:middle">
+    <img src="uploads/images/boitesignature.png" alt="Boite de 100g - Thé détox ou infusion"/>
+  </svg>
+<hr>
+<center><h4>Boite de 100g - Thé signature</h4></center>
+<center><p>10% des tickets offrent une boite de 100g d’un de nos thés signature. Une sélection exclusive pour nos clients.</p></center>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="card border-secondary mb-3" style="max-width: 20rem; max-height: 30rem; margin-right: 1em; ">
+  <svg  class="d-block user-select-none mt-1" width="100%" height="5"  focusable="false" role="img" preserveAspectRatio="xMidYMid slice" style="font-size:1.125rem;text-anchor:middle">
+    <img src="uploads/images/coffret39.png" alt="Boite de 100g - Thé détox ou infusion" />
+  </svg>
+<hr>
+<center><h4>Coffret découverte 39€</h4></center>
+<center><p>6% des tickets offrent un coffret découverte d’une valeur de 39€. Explorez notre gamme de thés bios.</p></center>
+</div>
+
+<div class="card border-secondary mb-3" style="max-width: 20rem; max-height: 30rem;">
+  <svg  class="d-block user-select-none mt-1" width="100%" height="5"  focusable="false" role="img" preserveAspectRatio="xMidYMid slice" style="font-size:1.125rem;text-anchor:middle">
+    <img src="uploads/images/coffret69.png" alt="Boite de 100g - Thé détox ou infusion" />
+  </svg>
+<hr>
+<center><h4>Coffret découverte 69€</h4></center>
+<center><p>4% des tickets offrent un coffret découverte d’une valeur de 69€. L’expérience ultime pour les amateurs de thé.</p></center>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<br>
 <center><h2>La sagesse de tout l’univers se trouve dans une tasse de thé.</h2></center>
 <center><p style="font-size:16px">Thé Tip Top est une jeune entreprise fondée par un groupe d’amis pharmaciens ayant fait leurs études en Angleterre et passionnés de thé. De retour en France, la passion grandissante a fait
 germer l’idée de produire un thé bio et fait maison.
@@ -168,16 +237,20 @@ etc</p></center>
 </div>
 
  <div class="cookie-container show" id="cookiePopup">
-     <p style="font-size:25px" id="ck1">Controler l'utilisation de vos données personnelles.</p>
+     <p style="font-size:25px" id="ck1">Nous respectons votre vie privée.</p>
       <p id="ck2">
-        Nous utilisons des technologies comme les coockies pour stocker et/ou accéder à des informations sur le terminal,comme des identifiants uniques,traiter des données personnelles non sensibles comme l'adresse IP.
+        Nous utilisons des cookies pour améliorer votre expérience de navigation, diffuser des publicités ou des contenus personnalisés et analyser notre trafic. En cliquant sur « Accepter », vous consentez à notre utilisation des cookies. 
       </p>
 
-      <button class="cookie-btn" id="ck3">
-        Accepter et fermer
-      </button>
+
+      <button class="btn btn-success mb-4 " id="ck3">Accepter </button>
+      <button class="btn btn-danger mb-4 mr-3" id="ck4">Fermer</button>
+      <a style="font-size:15px;font-color:#ffffff;" href="/mentions">Mentions légales</a> 
+
     </div>
-</div>
+    
+    </div>
+
 <script>
 let popUp = document.getElementById("cookiePopup");
 document.getElementById("ck3").addEventListener("click", () => {
@@ -186,7 +259,11 @@ document.getElementById("ck3").addEventListener("click", () => {
   localStorage.setItem("cookieBannerDisplayed", "true");
 });
 
+document.getElementById("ck4").addEventListener("click", () => {
+  popUp.classList.add("hide");
+  popUp.classList.remove("show");
 
+});
   if (localStorage.getItem("cookieBannerDisplayed")) {
       popUp.classList.remove("show");
       popUp.classList.add("hide");
