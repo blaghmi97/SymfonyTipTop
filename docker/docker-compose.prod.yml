@@ -45,6 +45,9 @@ services:
     volumes:
       - ${WORKSPACE_DIR}:/var/www
       - ${WORKSPACE_DIR}/nginx/default.prod.conf:/etc/nginx/conf.d/default.conf
+      - ${WORKSPACE_DIR}/nginx/dsp-archiwebf21-yb.fr.crt:/etc/nginx/ssl/dsp-archiwebf21-yb.fr.crt
+      - ${WORKSPACE_DIR}/nginx/dsp-archiwebf21-yb.fr.deprotected.key:/etc/nginx/ssl/dsp-archiwebf21-yb.fr.deprotected.key
+
     depends_on:
       - app
     networks:
