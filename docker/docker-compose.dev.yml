@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: blaghmi97/symfonyapp:main
+    image: blaghmi97/symfonyapp:dev
     container_name: symfony_app_dev
     volumes:
       - ${WORKSPACE_DIR}:/var/www
