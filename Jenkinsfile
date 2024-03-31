@@ -39,7 +39,7 @@ pipeline {
 
                     // Deploy the application
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} down"
-                    sh "docker stop $(docker ps -a -q) ; docker rm $(docker ps -a -q)"
+                    sh "docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} -p ${env.BRANCH_NAME} up -d"
                 }
             }
