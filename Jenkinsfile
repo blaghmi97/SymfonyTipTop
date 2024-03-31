@@ -39,8 +39,9 @@ pipeline {
 
                     // Deploy the application
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} down"
-                    sh "docker rmi blaghmi97/symfonyapp:main -f"
-                    sh "docker container prune -f"
+                    sh "docker stop $(docker ps -a -q)"
+                    sh "docker rm $(docker ps -a -q)"
+                    sh "docker rmi $(docker images -a -q)"
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} -p ${env.BRANCH_NAME} up -d"
                 }
             }
