@@ -39,7 +39,7 @@ pipeline {
 
                     // Deploy the application
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} down"
-                    sh "docker container prune -y"
+                    sh "docker container prune -f"
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} -p ${env.BRANCH_NAME} up -d"
                 }
             }
