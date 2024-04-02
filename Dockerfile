@@ -15,5 +15,7 @@ RUN chown -R www-data:www-data var
 RUN chmod -R 777 var/cache var/log
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
+
 CMD ["php-fpm"]
+
 
