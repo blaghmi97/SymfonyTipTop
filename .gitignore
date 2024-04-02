@@ -1,0 +1,5 @@
+jenkinsfile
+result .xml
+Dockerfile
+.env
+.env.test.local
