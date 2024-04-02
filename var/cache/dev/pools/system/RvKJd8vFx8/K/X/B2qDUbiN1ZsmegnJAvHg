@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CKernel%2523getConfigDir
 
+<<<<<<< HEAD
 return [PHP_INT_MAX, 1710513809];
+=======
+return [PHP_INT_MAX, 1711207082];
+>>>>>>> dev

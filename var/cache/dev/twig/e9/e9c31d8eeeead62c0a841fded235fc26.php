@@ -323,6 +323,7 @@ En fonction de votre situation,le conseiller pourra vous proposer un rendez-vous
     </div>
    </div>
 
+<<<<<<< HEAD
     <div class=\"row justify-content-center\">
     <div class=\"col-10\">
       <div class=\"form-check form-switch mt-4\">
@@ -332,6 +333,8 @@ En fonction de votre situation,le conseiller pourra vous proposer un rendez-vous
       </div>
     </div>
 
+=======
+>>>>>>> dev
 
     <div class=\"row justify-content-center mb-3\">
       <div class=\"col-6 mt-4\">
@@ -567,6 +570,7 @@ En fonction de votre situation,le conseiller pourra vous proposer un rendez-vous
     </div>
    </div>
 
+<<<<<<< HEAD
     <div class=\"row justify-content-center\">
     <div class=\"col-10\">
       <div class=\"form-check form-switch mt-4\">
@@ -576,6 +580,8 @@ En fonction de votre situation,le conseiller pourra vous proposer un rendez-vous
       </div>
     </div>
 
+=======
+>>>>>>> dev
 
     <div class=\"row justify-content-center mb-3\">
       <div class=\"col-6 mt-4\">

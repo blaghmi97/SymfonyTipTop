@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="13" assertions="27" errors="0" warnings="0" failures="0" skipped="0" time="0.012132">
+    <testsuite name="Project Test Suite" tests="13" assertions="27" errors="0" warnings="0" failures="0" skipped="0" time="0.012132">
+      <testsuite name="App\Tests\Entity\DistributedTicketsTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\DistributedTicketsTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.005094">
+        <testcase name="testNumero" class="App\Tests\Entity\DistributedTicketsTest" classname="App.Tests.Entity.DistributedTicketsTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\DistributedTicketsTest.php" line="10" assertions="1" time="0.005094"/>
+      </testsuite>
+      <testsuite name="App\Tests\Entity\GameTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\GameTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.000644">
+        <testcase name="testClosingDate" class="App\Tests\Entity\GameTest" classname="App.Tests.Entity.GameTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\GameTest.php" line="11" assertions="1" time="0.000644"/>
+      </testsuite>
+      <testsuite name="App\Tests\Entity\TicketsTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\TicketsTest.php" tests="3" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.004528">
+        <testcase name="testGettersAndSetters" class="App\Tests\Entity\TicketsTest" classname="App.Tests.Entity.TicketsTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\TicketsTest.php" line="14" assertions="2" time="0.002799"/>
+        <testcase name="testWinnersCollection" class="App\Tests\Entity\TicketsTest" classname="App.Tests.Entity.TicketsTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\TicketsTest.php" line="28" assertions="4" time="0.001338"/>
+        <testcase name="testConstruct" class="App\Tests\Entity\TicketsTest" classname="App.Tests.Entity.TicketsTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\TicketsTest.php" line="44" assertions="1" time="0.000391"/>
+      </testsuite>
+      <testsuite name="App\Tests\Entity\UserTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\UserTest.php" tests="5" assertions="15" errors="0" warnings="0" failures="0" skipped="0" time="0.001679">
+        <testcase name="testEmail" class="App\Tests\Entity\UserTest" classname="App.Tests.Entity.UserTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\UserTest.php" line="14" assertions="2" time="0.000914"/>
+        <testcase name="testRoles" class="App\Tests\Entity\UserTest" classname="App.Tests.Entity.UserTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\UserTest.php" line="24" assertions="2" time="0.000487"/>
+        <testcase name="testPassword" class="App\Tests\Entity\UserTest" classname="App.Tests.Entity.UserTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\UserTest.php" line="36" assertions="1" time="0.000075"/>
+        <testcase name="testWinningTickets" class="App\Tests\Entity\UserTest" classname="App.Tests.Entity.UserTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\UserTest.php" line="45" assertions="3" time="0.000116"/>
+        <testcase name="testPersonalInformation" class="App\Tests\Entity\UserTest" classname="App.Tests.Entity.UserTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\UserTest.php" line="59" assertions="7" time="0.000087"/>
+      </testsuite>
+      <testsuite name="App\Tests\Entity\WinnersTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\WinnersTest.php" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000187">
+        <testcase name="testUser" class="App\Tests\Entity\WinnersTest" classname="App.Tests.Entity.WinnersTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\WinnersTest.php" line="13" assertions="1" time="0.000064"/>
+        <testcase name="testTicket" class="App\Tests\Entity\WinnersTest" classname="App.Tests.Entity.WinnersTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\WinnersTest.php" line="22" assertions="1" time="0.000063"/>
+        <testcase name="testSend" class="App\Tests\Entity\WinnersTest" classname="App.Tests.Entity.WinnersTest" file="C:\wamp64\www\SymfonyTipTop\tests\Entity\WinnersTest.php" line="31" assertions="1" time="0.000060"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

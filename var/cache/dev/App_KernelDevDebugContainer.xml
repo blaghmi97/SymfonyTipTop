@@ -5,8 +5,13 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
+<<<<<<< HEAD
     <parameter key="kernel.build_dir">C:\wamp64\www\SymfonyTipTop\var\cache\dev</parameter>
     <parameter key="kernel.cache_dir">C:\wamp64\www\SymfonyTipTop\var\cache\dev</parameter>
+=======
+    <parameter key="kernel.build_dir">C:/wamp64/www/SymfonyTipTop/var/cache/dev</parameter>
+    <parameter key="kernel.cache_dir">C:/wamp64/www/SymfonyTipTop/var/cache/dev</parameter>
+>>>>>>> dev
     <parameter key="kernel.logs_dir">C:\wamp64\www\SymfonyTipTop\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -105,14 +110,22 @@
     <parameter key="translator.logging">false</parameter>
     <parameter key="translator.default_path">C:\wamp64\www\SymfonyTipTop/translations</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
+<<<<<<< HEAD
     <parameter key="debug.container.dump">C:\wamp64\www\SymfonyTipTop\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+=======
+    <parameter key="debug.container.dump">C:/wamp64/www/SymfonyTipTop/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
+>>>>>>> dev
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
+<<<<<<< HEAD
     <parameter key="serializer.mapping.cache.file">C:\wamp64\www\SymfonyTipTop\var\cache\dev/serialization.php</parameter>
+=======
+    <parameter key="serializer.mapping.cache.file">C:/wamp64/www/SymfonyTipTop/var/cache/dev/serialization.php</parameter>
+>>>>>>> dev
     <parameter key="cache.prefix.seed">_C:\wamp64\www\SymfonyTipTop.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
@@ -122,6 +135,7 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
+<<<<<<< HEAD
     <parameter key="session.save_path">C:\wamp64\www\SymfonyTipTop\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
@@ -131,6 +145,17 @@
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_main_requests">false</parameter>
     <parameter key="profiler.storage.dsn">file:C:\wamp64\www\SymfonyTipTop\var\cache\dev/profiler</parameter>
+=======
+    <parameter key="session.save_path">C:/wamp64/www/SymfonyTipTop/var/cache/dev/sessions</parameter>
+    <parameter key="session.metadata.update_threshold">0</parameter>
+    <parameter key="form.type_extension.csrf.enabled">true</parameter>
+    <parameter key="form.type_extension.csrf.field_name">_token</parameter>
+    <parameter key="validator.mapping.cache.file">C:/wamp64/www/SymfonyTipTop/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.translation_domain">validators</parameter>
+    <parameter key="profiler_listener.only_exceptions">false</parameter>
+    <parameter key="profiler_listener.only_main_requests">false</parameter>
+    <parameter key="profiler.storage.dsn">file:C:/wamp64/www/SymfonyTipTop/var/cache/dev/profiler</parameter>
+>>>>>>> dev
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
@@ -222,7 +247,11 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
+<<<<<<< HEAD
     <parameter key="doctrine.orm.proxy_dir">C:\wamp64\www\SymfonyTipTop\var\cache\dev/doctrine/orm/Proxies</parameter>
+=======
+    <parameter key="doctrine.orm.proxy_dir">C:/wamp64/www/SymfonyTipTop/var/cache/dev/doctrine/orm/Proxies</parameter>
+>>>>>>> dev
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -478,7 +507,11 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/http_cache</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/http_cache</argument>
+>>>>>>> dev
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -488,7 +521,11 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
+>>>>>>> dev
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -1181,7 +1218,11 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/system</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/system</argument>
+>>>>>>> dev
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1200,7 +1241,11 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/app</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/app</argument>
+>>>>>>> dev
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1472,7 +1517,11 @@
         </argument>
       </argument>
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="cache_dir">C:\wamp64\www\SymfonyTipTop\var\cache\dev/translations</argument>
+=======
+        <argument key="cache_dir">C:/wamp64/www/SymfonyTipTop/var/cache/dev/translations</argument>
+>>>>>>> dev
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
@@ -2580,7 +2629,11 @@
       <argument type="service" id=".service_locator.VzzixsX.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
+<<<<<<< HEAD
         <argument key="cache_dir">C:\wamp64\www\SymfonyTipTop\var\cache\dev</argument>
+=======
+        <argument key="cache_dir">C:/wamp64/www/SymfonyTipTop/var/cache/dev</argument>
+>>>>>>> dev
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -2693,13 +2746,21 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/annotations.php</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/annotations.php</argument>
+>>>>>>> dev
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache_adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <tag name="container.hot_path"/>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/annotations.php</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/annotations.php</argument>
+>>>>>>> dev
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -2833,10 +2894,17 @@
           </service>
         </argument>
       </argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/serialization.php</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/serialization.php</argument>
+    </service>
+    <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/serialization.php</argument>
+>>>>>>> dev
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -2970,7 +3038,11 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/sessions</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/sessions</argument>
+>>>>>>> dev
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -2982,7 +3054,11 @@
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
+<<<<<<< HEAD
           <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/sessions</argument>
+=======
+          <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/sessions</argument>
+>>>>>>> dev
         </service>
       </argument>
     </service>
@@ -3165,10 +3241,17 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/validation.php</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/validation.php</argument>
+    </service>
+    <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/validation.php</argument>
+>>>>>>> dev
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3374,7 +3457,11 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
+<<<<<<< HEAD
       <argument>file:C:\wamp64\www\SymfonyTipTop\var\cache\dev/profiler</argument>
+=======
+      <argument>file:C:/wamp64/www/SymfonyTipTop/var/cache/dev/profiler</argument>
+>>>>>>> dev
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -3421,7 +3508,11 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/App_KernelDevDebugContainer</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/App_KernelDevDebugContainer</argument>
+>>>>>>> dev
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -3614,7 +3705,11 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
+<<<<<<< HEAD
         <argument key="cache">C:\wamp64\www\SymfonyTipTop\var\cache\dev/twig</argument>
+=======
+        <argument key="cache">C:/wamp64/www/SymfonyTipTop/var/cache/dev/twig</argument>
+>>>>>>> dev
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -4678,7 +4773,11 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
+<<<<<<< HEAD
         <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/doctrine/orm/Proxies</argument>
+=======
+        <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/doctrine/orm/Proxies</argument>
+>>>>>>> dev
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -7183,7 +7282,11 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>aNwzHxQyz2</argument>
       <argument>0</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/app</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/app</argument>
+>>>>>>> dev
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -7193,7 +7296,11 @@
       <argument>abDidaw1P9</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/system</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/system</argument>
+>>>>>>> dev
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7201,7 +7308,11 @@
       <argument>HUTyT1CjH9</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/system</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/system</argument>
+>>>>>>> dev
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7209,7 +7320,11 @@
       <argument>C3kRUKNQ-P</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/system</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/system</argument>
+>>>>>>> dev
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7217,7 +7332,11 @@
       <argument>RvKJd8vFx8</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/system</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/system</argument>
+>>>>>>> dev
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7225,7 +7344,11 @@
       <argument>RX3rLPV9DK</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/system</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/system</argument>
+>>>>>>> dev
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7233,7 +7356,11 @@
       <argument>JmT6zv2V9r</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/system</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/system</argument>
+>>>>>>> dev
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -7243,7 +7370,11 @@
       <argument>r5pBHI+SlE</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
+<<<<<<< HEAD
       <argument>C:\wamp64\www\SymfonyTipTop\var\cache\dev/pools/system</argument>
+=======
+      <argument>C:/wamp64/www/SymfonyTipTop/var/cache/dev/pools/system</argument>
+>>>>>>> dev
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
