@@ -25,6 +25,21 @@ services:
       - ${WORKSPACE_DIR}/loto.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - symfony
+      - mysql-phpmyadmin
+
+
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin
+    restart: unless-stopped
+    ports:
+      - 8081:80
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - mysql-phpmyadmin
 
   webserver:
     image: nginx:alpine
@@ -40,6 +55,8 @@ services:
       - "80:80"
 networks:
   symfony:
+  mysql-phpmyadmin:
+
 
 
 volumes:
