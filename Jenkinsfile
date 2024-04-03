@@ -15,11 +15,7 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-<<<<<<< HEAD
                     sh "cd /var/lib/jenkins/workspace/symfony_preprod"
-=======
-                    sh "cd /var/lib/jenkins/workspace/tiptop_dev_dev"
->>>>>>> dev
                     sh "docker build -t ${REPO_NAME}:${env.BRANCH_NAME} ."
                     sh "sudo docker push ${REPO_NAME}:${env.BRANCH_NAME}"
                     
@@ -45,25 +41,17 @@ pipeline {
 
                     // Deploy the application
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} down"
-<<<<<<< HEAD
+
                     sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} -p ${env.BRANCH_NAME} up -d"
-=======
-                    sh "WORKSPACE_DIR=${env.WORKSPACE} docker-compose -f ${composeFilePath} up -d"
->>>>>>> dev
+
                 }
             }
         }
 
-<<<<<<< HEAD
-
         stage('Test') {
             steps {
                sh 'cd /var/lib/jenkins/workspace/symfony_preprod &&  phpunit --log-junit result.xml'
-=======
-        stage('Test') {
-            steps {
-               sh 'cd /var/lib/jenkins/workspace/tiptop_dev_dev &&  phpunit --log-junit result.xml'
->>>>>>> dev
+
             }
         }
 
